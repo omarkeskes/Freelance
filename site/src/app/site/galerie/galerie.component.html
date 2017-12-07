@@ -1,0 +1,54 @@
+           <!-- News -->
+        <div id="catalogue" class="container-fluid g-padding-y-80--xs g-padding-y-125--sm">
+            <div class="g-text-center--xs g-margin-b-80--xs">
+                <p class="text-uppercase g-font-size-16--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Catalogue</p>
+                <p>Passioné depuis toujours par l'art du bois</p>
+            </div>
+
+            <!-- Swiper -->
+            <div class="s-swiper js__swiper-news">
+                <!-- Wrapper -->
+                <div class="swiper-wrapper g-margin-b-60--xs">
+                    <article *ngFor="let meuble of meubles" class="g-bg-position--center swiper-slide" [style.background-image] = "'url(../assets/img/gallery/'+meuble.photo+')'" >
+                        <div class="g-text-center--xs g-padding-x-15--xs g-padding-x-30--lg g-padding-y-50--xs g-margin-t-120--xs">
+                            <div class="g-margin-b-25--xs">
+                                
+                                <p class="g-color--white">Clinics can be privately operated.</p>
+                            </div>
+                                 <a href="../assets/img/gallery/{{meuble.photo}}" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="{{meuble.nom}} <br/> by KeenThemes Inc.">
+                                    <i class="ti-fullscreen"></i>
+                                </a>
+                                
+                        </div>
+                        
+                    </article>
+
+
+                </div>
+                <!-- End Wrapper -->
+
+                <!-- Pagination -->
+                <div class="s-swiper__pagination-v1 s-swiper__pagination-v1--dark g-text-center--xs js__swiper-pagination"></div>
+            </div>
+            <!-- End Swiper -->
+        </div>
+        <!-- End News -->
+<!--<div id="catalogue" class="container g-padding-y-80--xs">
+            <div class="g-text-center--xs g-margin-b-40--xs">
+                <h2 class="g-font-size-32--xs g-font-size-36--md">Catalogue</h2>
+            </div>
+            <div class="s-portfolio">
+                <div id="js__filters-portfolio-gallery" class="s-portfolio__filter-v1 cbp-l-filters-text cbp-l-filters-center">
+                    <div  class="s-portfolio__filter-v1-item cbp-filter-item cbp-filter-item-active" data-filter="*">Show All</div>
+                    <div data-filter=".chambre" class="s-portfolio__filter-v1-item cbp-filter-item">Chambres</div>
+                    <div data-filter=".salon" class="s-portfolio__filter-v1-item cbp-filter-item">Salons</div>
+                    <div data-filter=".diver" class="s-portfolio__filter-v1-item cbp-filter-item">Divers</div>
+              </div>
+            </div>
+        </div>-->
+ <!-- End Portfolio Filter -->
+
+        <div class="container g-margin-b-100--xs">
+            <div class="cbp" id="js__grid-portfolio-gallery" >
+            </div>
+        </div>

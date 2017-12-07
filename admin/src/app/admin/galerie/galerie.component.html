@@ -1,0 +1,242 @@
+
+                
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb push-down-0">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Galerie</a></li>
+                </ul>
+                <!-- END BREADCRUMB -->                                                
+                
+                <!-- START CONTENT FRAME -->
+                <div class="content-frame">   
+                    
+                    <!-- START CONTENT FRAME TOP -->
+                    <div class="content-frame-top">                        
+                        <div class="page-title">                    
+                            <h2><span class="fa fa-image"></span> Gallery</h2>
+                        </div>                                      
+                        <div class="pull-right"> 
+                            <a class="btn btn-primary btn-rounded" (click)='AddM()'><span class="fa fa-plus"></span> Nouveau Meuble</a>                                                      
+                            <button (click)="showcategorie()" class="btn btn-default content-frame-right-toggle"><span class="fa fa-bars"></span></button>
+                        </div>                         
+                    </div>                                   
+                    
+                    <!-- START CONTENT FRAME RIGHT -->
+                    <div class="content-frame-right" id="categorie">                        
+                                  
+                        <h4>Categories:</h4>
+                        
+                        <div class="list-group border-bottom push-down-20">
+                            <a href="#" class="list-group-item active">All <span class="badge badge-primary">12</span></a>
+                            <a *ngFor="let categorie of categories" style="cursor: pointer" (click)="getMeubles(categorie.id)" class="list-group-item">{{categorie.nom}} <span class="badge badge-danger"><span class="fa fa-trash-o" (click)="deleteCategorie(categorie.id)"></span></span><span class="badge badge-success">7</span></a>
+                        </div>     
+                        
+                        <a *ngIf='addC' class="btn btn-primary btn-rounded" (click)='returnAddC()'> Cancel</a>   
+                        <a *ngIf='!addC' class="btn btn-primary btn-rounded" (click)='AddC()'><span class="fa fa-plus"></span> Nouvelle Categorie</a>  
+                                                  
+                        <div *ngIf='addC' class="block push-up-10">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                             <div class="form-group">                                               
+                                                <div class="col-md-12 col-xs-12">                                                                                                                                                        
+                                                    <input [(ngModel)] = "nameCateg" type="text" class="form-control" value="Name"/>                                                    
+                                                </div>
+                                            </div>
+                                            <hr>
+                                          <div class="col-md-12 col-xs-12">
+                                                <button (click)='addCategorie()' class="btn btn-success btn-block"><span class="fa fa-plus"></span> Ajout nouvelle categorie</button>
+                                            </div>
+
+                                            
+                                </div>
+                             </div>
+                            <!--<form action="upload.php" class="dropzone dropzone-mini">
+                                <div class="dz-default dz-message"><input type="file" multiple="multiple" class="dz-hidden-input" style="visibility: hidden;"><span>Drop files here to upload</span></div>
+                            </form>-->
+<!--                            <div class="dropzone dropzone-mini">
+                                <dropzone class="dz-default dz-message" [config]="config" [message]="'Click or drag images here to upload'" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></dropzone>
+                            </div>-->
+                        </div>              
+                        <h4>Tags:</h4>
+                        <ul class="list-tags">
+                            <li><a href="#"><span class="fa fa-tag"></span> amet</a></li>
+                            <li><a href="#"><span class="fa fa-tag"></span> rutrum</a></li>
+                            <li><a href="#"><span class="fa fa-tag"></span> nunc</a></li>
+                            <li><a href="#"><span class="fa fa-tag"></span> tempor</a></li>
+                            <li><a href="#"><span class="fa fa-tag"></span> eros</a></li>
+                            <li><a href="#"><span class="fa fa-tag"></span> suspendisse</a></li>
+                            <li><a href="#"><span class="fa fa-tag"></span> dolor</a></li>
+                        </ul>
+                    </div>
+                    <!-- END CONTENT FRAME RIGHT -->
+                    <!-- START CONTENT FRAME BODY -->
+                    <div class="content-frame-body content-frame-body-left">
+                        <form *ngIf='addM' class="form-horizontal">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><strong>Meuble</strong> Add</h3>
+                                    <ul class="panel-controls">
+                                        <li><a (click)='returnAddM()' class="panel-remove"><span class="fa fa-times"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-body">
+                                    <p>This is non libero bibendum, scelerisque arcu id, placerat nunc. Integer ullamcorper rutrum dui eget porta. Fusce enim dui, pulvinar a augue nec, dapibus hendrerit mauris. Praesent efficitur, elit non convallis faucibus, enim sapien suscipit mi, sit amet fringilla felis arcu id sem.</p>
+                                </div>
+                                <div class="panel-body">                                                                        
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Nom</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+
+                                                <input [(ngModel)] = "nameM" type="text" class="form-control" name="nameM"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    
+                                   <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Description</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <textarea [(ngModel)] = "descriptionM" class="form-control" rows="2" name="descriptionM"></textarea>
+                                            <span class="help-block">Default textarea field</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Categorie</label>
+                                        <div class="col-md-6 col-xs-12">                                                                                            
+                                            <select class="form-control select"  [(ngModel)] = "categorieM" name="categorieM">
+                                                <option *ngFor="let cat of categories" [ngValue]="cat" >{{cat.nom}}</option>
+                                            </select>
+                                            <span class="help-block">Select box example</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Photo</label>
+                                        <div class="col-md-6 col-xs-12">                                                                                                                                        
+                                            <input (change)="fileUpload($event)" type="file" class="fileinput btn-primary" name="filename" id="filename" title="Browse file"/>
+                                            <span class="help-block">Input type file</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-default">Clear Form</button>                                    
+                                    <button (click)="addMeuble()" class="btn btn-primary pull-right">Save</button>
+                                </div>
+                            </div>
+                            </form>
+                        <!--<div *ngIf='addM' class="col-md-12">
+                            
+                                                     
+                            <div class="panel panel-default">
+                                <div class="panel-body">    
+                                    <form class="form-horizontal" >                                                                    
+                                    
+                                            <div class="form-group">
+                                                <label class="col-md-3 col-xs-12 control-label">Nom</label>
+                                                <div class="col-md-6 col-xs-12">                                                                                                                                                        
+                                                    <input [(ngModel)] = "nameM" type="text" class="form-control" name="nameM"/>                                                    
+                                                </div>
+                                            </div>
+                                    
+                                    
+                                            <div class="form-group">
+                                                <label class="col-md-3 col-xs-12 control-label">Description</label>
+                                                <div class="col-md-6 col-xs-12">                                            
+                                                    <textarea [(ngModel)] = "descriptionM" class="form-control" rows="2" name="descriptionM"></textarea>
+                                                </div>
+                                            </div>                                         
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Categorie</label>
+                                        <div class="col-md-6 col-xs-12">                                                                                            
+                                            <select class="form-control select"  [(ngModel)] = "categorieM" name="categorieM">
+                                                <option *ngFor="let cat of categories" [ngValue]="cat" >{{cat.nom}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                   <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Image</label>
+                                        <div class="col-md-6 col-xs-12">                                                                                                                                        
+                                            <input (change)="fileUpload($event)" type="file" class="fileinput btn-primary" name="filename" id="filename" title="Browse file"/>
+                                            <span class="help-block">Input type file</span>
+                                        </div>
+                                    </div>
+                                          <div class="pull-right push-up-10">
+                                                <button (click)="addMeuble()" class="btn btn-success btn-block"><span class="fa fa-plus"></span> Ajout nouveau meuble</button>
+                                            </div>
+
+                                    </form>                                              
+                            </div>
+                        
+                        </div>
+                        </div>-->
+                        <div class="pull-left push-up-10">
+                            <button class="btn btn-primary" (click)="toggleAll()" id="gallery-toggle-items">Toggle All</button>
+                        </div>
+                        <div class="pull-right push-up-10">
+                            <div class="btn-group">
+                                <button class="btn btn-primary"><span class="fa fa-pencil"></span> Edit</button>
+                                <button (click)="deleteAllmeuble()" class="btn btn-primary"><span class="fa fa-trash-o"></span> Delete</button>
+                            </div>                            
+                        </div>
+                        
+                        <div class="gallery" id="links">
+
+                            <a *ngFor="let meuble of meubles"  (click)="photo($event,meuble.id)" class="gallery-item"  title="{{meuble.nom}}" data-gallery>
+                                <div class="image">           
+
+                                                      
+                                    <img  src="./assets/assets/images/sbb/{{meuble.photo}}" width="200px" height="150px" alt="Nature Image 1"/>                                        
+                                   
+                                    <ul class="gallery-item-controls" >
+                                    <li><label class="check">
+                                        <div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheckbox" (change)="checkmeuble(meuble.id,$event)" style="position: absolute; opacity: 0;"/>
+                                        <ins id="check" class="iCheck-helper"  style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                       </div>
+                                        </label></li>
+                                        <li><span class="gallery-item-remove" (click)="deletemeuble(meuble.id)"><i class="fa fa-times"></i></span></li>                                                                           
+                                    </ul>
+                                </div>
+                                <div class="meta">
+                                    <strong>{{meuble.nom}}</strong>
+                                    <span>{{meuble.description}}</span>
+                                </div>                                
+                            </a>
+
+                            <a class="gallery-item" href="./assets/assets/images/gallery/nature-1.jpg" title="Nature Image 1" data-gallery>
+                                <div class="image">                              
+                                    <img src="./assets/assets/images/gallery/nature-1.jpg" alt="Nature Image 1"/>                                        
+                                    <ul class="gallery-item-controls">
+                                        <li><label class="check"><input type="checkbox" class="icheckbox" /></label></li>
+                                        <li><span class="gallery-item-remove"><i class="fa fa-times"></i></span></li>
+                                    </ul>                                                                    
+                                </div>
+                                <div class="meta">
+                                    <strong>Nature image 1</strong>
+                                    <span>Description</span>
+                                </div>                                
+                            </a>
+                                                                                                               
+                           
+                             
+                        </div>
+                             
+                        <ul class="pagination pagination-sm pull-right push-down-20 push-up-20">
+                            <li (click)="setpages(i)" *ngFor="let p of pages; let i = index" id="page{{i+1}}"><a  >{{i+1}}</a></li>
+                        </ul>
+                    </div>       
+                    <!-- END CONTENT FRAME BODY -->
+
+     <!--  <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <img id="imgmodal" src="//placehold.it/1000x600" class="img-responsive">
+        </div>
+    </div>
+  </div>
+</div>
+-->

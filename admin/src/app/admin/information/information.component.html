@@ -1,0 +1,229 @@
+        
+                
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Informations</a></li>
+                </ul>
+                <!-- END BREADCRUMB -->
+                
+<!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                            <form class="form-horizontal">
+                                                            
+                                <div class="panel panel-default tabs">                            
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="active"><a href="#tab-first" role="tab" data-toggle="tab">Usine</a></li>
+                                        <li><a href="#tab-second" role="tab" data-toggle="tab">Shworoom Tunis</a></li>
+                                        <li><a href="#tab-third" role="tab" data-toggle="tab">Shworoom Sfax</a></li>
+                                    </ul>
+                                    <div class="panel-body tab-content">
+                                <div class="tab-pane active" id="tab-first">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dolor sem, quis pharetra dui ultricies vel. Cras non pulvinar tellus, vel bibendum magna. Morbi tellus nulla, cursus non nisi sed, porttitor dignissim erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis commodo lectus. Vivamus vel tincidunt enim, non vulputate ipsum. Ut pellentesque consectetur arcu sit amet scelerisque. Fusce commodo leo eros, ut eleifend massa congue at.</p>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Adresse</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-home"></span></span>
+                                                <input name ="adresse" [(ngModel)] = "adresse" type="text" class="form-control" value="{{Information.adresse}}" />
+
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Telephone</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-phone"></span></span>
+                                                <input name ="tel" [(ngModel)] = "tel" type="text" class="form-control" value="{{Information.tel}}" />
+
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Fax</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-file-text-o"></span></span>
+                                                <input name ="fax" [(ngModel)] = "fax" type="text" class="form-control" value="{{Information.fax}}" />
+
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">E-mail</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-envelope-o"></span></span>
+                                                <input name="mail" type="input" [(ngModel)] = "mail" class="form-control" value="{{Information.mail}}"/>
+                                            </div>            
+                                            <span class="help-block">Password field sample</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">Facebook</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-facebook"></span></span>
+                                                <input type="text" name="facebook"  [(ngModel)] = "facebook"  class="form-control datepicker" value="{{Information.facebook}}">                                            
+                                            </div>
+                                            <span class="help-block">Click on input field to get datepicker</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Description</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <textarea [(ngModel)] = "description" name="description" class="form-control" rows="5" value="{{Information.description}}"></textarea>
+                                            <span class="help-block">Default textarea field</span>
+                                        </div>
+                                    </div>
+                                            
+                            </div>
+                            <div class="tab-pane" id="tab-second">
+                                            <p>Donec tristique eu sem et aliquam. Proin sodales elementum urna et euismod. Quisque nisl nisl, venenatis eget dignissim et, adipiscing eu tellus. Sed nulla massa, luctus id orci sed, elementum consequat est. Proin dictum odio quis diam gravida facilisis. Sed pharetra dolor a tempor tristique. Sed semper sed urna ac dignissim. Aenean fermentum leo at posuere mattis. Etiam vitae quam in magna viverra dictum. Curabitur feugiat ligula in dui luctus, sed aliquet neque posuere.</p>
+                                     <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Adresse</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-home"></span></span>
+                                                <input name ="adresseT" [(ngModel)] = "adresseT" type="text" class="form-control" value="{{ShowroomTunis.adresse}}" />
+
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Telephone</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-phone"></span></span>
+                                                <input name ="telT" [(ngModel)] = "telT" type="text" class="form-control" value="{{ShowroomTunis.tel}}" />
+
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Mobile</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-mobile"></span></span>
+                                                <input name ="mobileT" [(ngModel)] = "mobileT" type="text" class="form-control" value="{{ShowroomTunis.mobile}}" />
+
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">E-mail</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-envelope-o"></span></span>
+                                                <input name="mailT" type="input" [(ngModel)] = "mailT" class="form-control" value="{{ShowroomTunis.mail}}"/>
+                                            </div>            
+                                            <span class="help-block">Password field sample</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">Facebook</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-facebook"></span></span>
+                                                <input type="text" name="facebook"  [(ngModel)] = "facebook"  class="form-control datepicker" value="{{Information.facebook}}">                                            
+                                            </div>
+                                            <span class="help-block">Click on input field to get datepicker</span>
+                                        </div>
+                                    </div>
+
+                                            
+                                </div>                                        
+                                <div class="tab-pane" id="tab-third">
+                                            <p>This is non libero bibendum, scelerisque arcu id, placerat nunc. Integer ullamcorper rutrum dui eget porta. Fusce enim dui, pulvinar a augue nec, dapibus hendrerit mauris. Praesent efficitur, elit non convallis faucibus, enim sapien suscipit mi, sit amet fringilla felis arcu id sem. Phasellus semper felis in odio convallis, et venenatis nisl posuere. Morbi non aliquet magna, a consectetur risus. Vivamus quis tellus eros. Nulla sagittis nisi sit amet orci consectetur laoreet.</p>
+                                            
+                                                                                 <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Adresse</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-home"></span></span>
+                                                <input name ="adresseS" [(ngModel)] = "adresseS" type="text" class="form-control" value="{{ShowroomSfax.adresse}}" />
+
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Telephone</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-phone"></span></span>
+                                                <input name ="telS" [(ngModel)] = "telS" type="text" class="form-control" value="{{ShowroomSfax.tel}}" />
+
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Mobile</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-mobile"></span></span>
+                                                <input name ="mobileS" [(ngModel)] = "mobileS" type="text" class="form-control" value="{{ShowroomSfax.mobile}}" />
+
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">E-mail</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-envelope-o"></span></span>
+                                                <input name="mailS" type="input" [(ngModel)] = "mailS" class="form-control" value="{{ShowroomSfax.mail}}"/>
+                                            </div>            
+                                            <span class="help-block">Password field sample</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">Facebook</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-facebook"></span></span>
+                                                <input type="text" name="facebook"  [(ngModel)] = "facebook"  class="form-control datepicker" value="{{Information.facebook}}">                                            
+                                            </div>
+                                            <span class="help-block">Click on input field to get datepicker</span>
+                                        </div>
+                                    </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">                                                                        
+                                        <button (click)='UpdateInfo()' class="btn btn-primary pull-right">Save Changes <span class="fa fa-floppy-o fa-right"></span></button>
+                                    </div>
+                                </div>                                
+                            
+                            </form>
+                            
+                        </div>
+                    </div>                    
+                    
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                                                  
+                        
+            <!-- END PAGE CONTENT -->

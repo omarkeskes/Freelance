@@ -1,0 +1,300 @@
+
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                </ul>
+                <!-- END BREADCRUMB -->
+                
+                <!-- PAGE TITLE -->
+                <div class="page-title">                    
+                    <h2><span class="fa fa-desktop"></span> Home</h2>
+                </div>
+                <!-- END PAGE TITLE -->                
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+
+ 
+                    <div class="row">
+                        
+                        <div class="col-md-12">
+                          <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <p>Use search to find contacts. You can search by: name, address, phone. Or use the advanced search.</p>
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <span class="fa fa-search"></span>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Who are you looking for?"/>
+                                                    <div class="input-group-btn">
+                                                        <button class="btn btn-primary">Search</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button (click)="buttonAdd()" class="btn btn-success btn-block"><span class="fa fa-plus"></span> Add new member</button>
+                                            </div>
+                                        </div>
+                                    </form>                                    
+                                </div>
+                            </div>
+
+                        <div *ngIf="add" class="col-md-12">
+                            
+                            <form class="form-horizontal">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><strong>Membre</strong> Add</h3>
+                                    <ul class="panel-controls">
+                                        <li><a (click)="buttonCancel()" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-body">
+                                    <p>This is non libero bibendum, scelerisque arcu id, placerat nunc. Integer ullamcorper rutrum dui eget porta. Fusce enim dui, pulvinar a augue nec, dapibus hendrerit mauris. Praesent efficitur, elit non convallis faucibus, enim sapien suscipit mi, sit amet fringilla felis arcu id sem.</p>
+                                </div>
+                                <div class="panel-body">                                                                        
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Login</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                                <input name ="loginU" [(ngModel)] = "loginU" type="text" class="form-control"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">Password</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-unlock-alt"></span></span>
+                                                <input name ="passU" [(ngModel)] = "passU" type="password" class="form-control"/>
+                                            </div>            
+                                            <span class="help-block">Password field sample</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Nom</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"></span>
+                                                <input name ="nomU" [(ngModel)] = "nomU" type="text" class="form-control"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Prenom</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"></span>
+                                                <input name ="prenomU" [(ngModel)] = "prenomU" type="text" class="form-control"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">E-Mail</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-envelope-o"></span></span>
+                                                <input name ="mailU" [(ngModel)] = "mailU" type="text" class="form-control"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Telephone</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-phone"></span></span>
+                                                <input name ="telU" [(ngModel)] = "telU" type="text" class="form-control"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Adresse</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-home"></span></span>
+                                                <input name ="adresseU" [(ngModel)] = "adresseU" type="text" class="form-control"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Photo</label>
+                                        <div class="col-md-6 col-xs-12">                                                                                                                                        
+                                            <input (change)="fileUpload($event)" type="file" class="fileinput btn-primary" name="filename" id="filename" title="Browse file"/>
+                                            <span class="help-block">Input type file</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Admin</label>
+                                        <div class="col-md-6 col-xs-12">                                                                                                                                        
+                                            <label class="check"><input type="checkbox" class="icheckbox" checked="checked"/> Checkbox title</label>
+                                            <span class="help-block">Checkbox sample, easy to use</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-default">Clear Form</button>                                    
+                                    <button (click)="addUser()" class="btn btn-primary pull-right">Save</button>
+                                </div>
+                            </div>
+                            </form>
+                            
+                        </div>
+                            <!-- START SEARCH RESULT -->
+                            <div class="search-results">
+                                <div class="sr-item">
+                                    <div class="sr-item-title">Les membres de Start Beaux Bois</div>      
+                                    <div class="sr-item-link">Dashboard <span class="fa fa-angle-right"></span> Pages <span class="fa fa-angle-right"></span> Address Book</div>
+                                    <p>Search Results for <strong>Start Beaux Bois</strong> in Home: <strong>43</strong> contacts.</p>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div *ngFor="let user of users" class="col-md-1 col-xs-1">
+                                                    <a (click)='getProfil(user.login)' class="friend">
+                                                        <img *ngIf="user" src="./assets/assets/images/users/{{user.photo}}">
+                                                        <span *ngIf="user">{{user.prenom}} {{user.nom}}</span>
+                                                    </a>                                            
+                                                </div>
+           
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p><a href="#" class="btn btn-primary btn-rounded"><span class="fa fa-book"></span> Profil</a></p>
+                                </div>               
+                            </div>
+                            <!-- END SEARCH RESULT -->                           
+                            
+                        </div>      
+                        <div class="col-md-6 col-md-offset-3">
+                            <!-- CONTACT ITEM -->
+                            <div class="panel panel-default">
+                                <div class="panel-body profile bg-info">
+
+                                    <div class="profile-image">
+                                        <img src="./assets/assets/images/users/{{user.photo}}" alt="John Doe">
+                                    </div>
+                                    <div class="profile-data">
+                                        <div *ngIf="user" class="profile-data-name">{{user.prenom}} {{user.nom}}</div>
+                                        <!--<div class="profile-data-title">UI/UX Designer</div>-->
+                                    </div>
+                                    <div class="profile-controls">
+                                        <a (click)='buttonEditProfil()' class="profile-control-left"><span class="fa fa-pencil"></span></a>
+                                        <a (click)='deleteUser(user.login)' class="profile-control-right"><span class="fa fa-trash-o"></span></a>
+                                    </div>
+
+                                </div>                                
+                                <div id="dataprofil" class="panel-body">                                    
+                                    <div class="contact-info">
+                                        <p><small>Mobile</small><br/>{{user.tel}}</p>
+                                        <p><small>Email</small><br/>{{user.mail}}</p>
+                                        <p><small>Address</small><br/>{{user.adresse}}</p>                                   
+                                    </div>
+                                </div>
+                        <form id="editprofil" class="form-horizontal" style="display:none;">
+                            <div  class="panel panel-default">
+                                <div class="panel-body">                                                                        
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Nom</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"></span>
+                                                <input name ="nom" [(ngModel)] = "nom" type="text" class="form-control" value="{{user.nom}}"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Prenom</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"></span>
+                                                <input name ="prenom" [(ngModel)] = "prenom" type="text" class="form-control" value="{{user.prenom}}"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">E-Mail</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-envelope-o"></span></span>
+                                                <input name ="mail" [(ngModel)] = "mail" type="text" class="form-control" value="{{user.mail}}"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Telephone</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-phone"></span></span>
+                                                <input name ="tel" [(ngModel)] = "tel" type="text" class="form-control" value="{{user.tel}}"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Adresse</label>
+                                        <div class="col-md-6 col-xs-12">                                            
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-home"></span></span>
+                                                <input name ="adresse" [(ngModel)] = "adresse" type="text" class="form-control" value="{{user.adresse}}"/>
+                                            </div>                                            
+                                            <span class="help-block">This is sample of text field</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Photo</label>
+                                        <div class="col-md-6 col-xs-12">                                                                                                                                        
+                                            <input (change)="fileUpload($event)" type="file" class="fileinput btn-primary" name="filename" id="filename" title="Browse file"/>
+                                            <span class="help-block">Input type file</span>
+                                        </div>
+                                    </div>
+                                     
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">Password</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-unlock-alt"></span></span>
+                                                <input name="password" [(ngModel)] = "password" type="password" class="form-control"/>
+                                            </div>            
+                                            <span class="help-block">Password field sample</span>
+                                        </div>
+                                    </div>                                   
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Admin</label>
+                                        <div class="col-md-6 col-xs-12">                                                                                                                                        
+                                            <label class="check"><input [(ngModel)] = "admin" name="admin" type="checkbox" class="icheckbox" checked="checked"/> Checkbox title</label>
+                                            <span class="help-block">Checkbox sample, easy to use</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="panel-footer">
+                                    <button (click)='buttonCancelProfil()' class="btn btn-default">Cancel</button>                                    
+                                    <button (click)='editUser()' class="btn btn-primary pull-right">Save</button>
+                                </div>
+                            </div>
+                            </form>                             
+                            </div>
+                            <!-- END CONTACT ITEM -->
+                        </div>
+                    </div>
+                                                            
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->  
